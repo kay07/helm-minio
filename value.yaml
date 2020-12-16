@@ -1,0 +1,17 @@
+
+nameOverride: "minio"
+fullnameOverride: "minio"
+
+#mountPath: "/public/minio"
+
+accessKey: "minio12345"
+secretKey: "minio12345"
+persistence:
+  storageClass: minio
+#  enabled: false
+#  existingClaim: minio-pvc #使用存在的pvc存储数据
+  size: 20Gi
+service:
+  type: NodePort
+  port: 9000
+  nodePort: 30200
